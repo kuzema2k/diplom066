@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Патронажная служба "Добрые руки"</title>
+  <link rel="icon" href="img/logo.png" type="image/png">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    .mainwrapper {
+      max-width: 1440px;
+      min-height: 100vh;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+    }
+    main {
+      flex: 1;
+      background: left / contain url(img/ruki.png);
+    }
+    header, footer {
+      display: flex; 
+      align-items: center;
+      background-color: lightgreen;
+    }
+    header {
+      height: 15vh;
+      text-shadow: 0 0 1.5px;
+    }
+    footer {
+      height: 10vh;
+      justify-content: center;
+      font-size: 1.3rem;
+    }
+    header > .logo, header > .tel {
+      width: 15%;
+      margin: 1.3rem;
+      font-size: 1.3rem;
+      object-fit: contain;
+    }
+    nav {
+      width: 70%;
+      margin-left: 5%;
+      font-size: 1.3rem;
+    }
+    nav li {
+      display: inline;
+      margin-left: 5%;
+      text-decoration: none;
+    }
+    main > section {
+      display: flex;
+      margin: 2rem;
+      font-size: 1.2rem;
+    }
+    h1 {
+      margin: 1rem;
+      font-weight: 900;
+      text-align: center;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="mainwrapper">
+    <header>
+      <div class="logo">
+        <img src="img/biglogo.png" alt="логотип">
+      </div>
+      <nav>
+        <ul>
+          <li><a href="/">Главная</a></li>
+          <li><a href="">О нас</a></li>
+          <li><a href="">Сиделка с проживанием</a></li>
+          <li><a href="">Сиделка приходящая</a></li>
+          <li><a href="">Контакты</a></li>
+        </ul>
+      </nav>
+      <div class="tel">
+        <img src="img/tel2.png" alt="" width="25" /> +7(495)922-44-56<br />
+        <img src="img/tel2.png" alt="" width="25" /> +7(999)677-18-00
+      </div>
+    </header>
+    <main>
+      <h1>Служба помощи больным и пожилым людям</h1>
+      <section>
+        <figure style="width: 50%;"><img src="img/pic1.jpg" alt="" width="90%" id="picture"/></figure>
+        <p style="width: 50%;">Патронажная служба "Добрые руки" работает с 2021 года, 
+          предоставляя услуги по подбору профессиональных сиделок для больных, ослабленных, и престарелых людей, которые нуждаются в помощи и постоянном уходе. 
+          Многие из сиделок работают с нами со дня основания патронажной службы. От своего персонала мы требуем наличия медицинского образования, 
+          профессионализма, опыта работы в сфере медицины, любви к людям, доброты и терпения по отношению к больным. Для того, чтобы обеспечить 
+          уверенность в полной безопасности вашего родственника, мы проводим тщательную проверку наших сотрудниц. Каждая из сиделок проходит собеседование 
+          с психологом, проверку нужных документов (паспорт, патент, диплом и т.д.) и рекомендаций.
+          Мы работаем ежедневно, включая выходные и праздничные дни, и наши сиделки будут готовы в день обращения оказаться в любом месте, 
+          где находится пациент, и приступить к выполнению своих обязанностей: в квартире или в загородном доме, в больнице или госпитале, на даче. 
+          По вашему желанию может быть разработан любой график работы сиделки: с проживанием, почасовой график работы (заказ от одного часа), 
+          суточные дежурства, ночные дежурства, и все прочие возможные варианты работы сиделки.</p>
+      </section>
+    </main>
+    <footer>
+      <section>
+        &copy;2021 – <script>document.write(new Date().getFullYear())</script>
+        , Официальный сайт патронажной службы "Добрые руки".
+      </section>
+    </footer>
+  </div>
+  <script>
+    let picture = document.getElementById("picture");
+    let num = 1;
+    picture.onclick = (e) => {e.target.src = `img/pic${num+= 1}.jpg`;}
+  </script>
+</body>
+</html>
